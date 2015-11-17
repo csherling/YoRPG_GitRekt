@@ -50,27 +50,8 @@ public class Character{
 	return damage;
     }
 
-    public void normalize() {
-		
-	defense = 40;
-	attack = 0.4;
-		
-    }
-	
-    public void specialize() {
-	defense-=10;
-	attack+=1;
-    }
+    abstract public void normalize();
+    abstract public void specialize();
     
-    public String about(Character dude){
-	String info = "";
-	info += "Name: " + name + "\n";
-	info += "Class: " + dude + "\n";
-	info += "hp: " + hp + "\n";
-	info += "Strength: " + strength + "\n";
-	info += "Defense: " + defense + "\n";
-	info += "Attack: " + attack + "\n";
-	return info;
-   }
-
+	abstract public String about(Character dude);
 }
